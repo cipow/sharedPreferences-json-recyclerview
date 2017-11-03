@@ -21,18 +21,10 @@ import java.util.List;
 
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MAdapter> {
 
-    List<JSONObject> dataJson = new ArrayList<>();
     JSONArray jsonArray;
 
     public MessageAdapter(JSONArray jsonArray) {
         this.jsonArray = jsonArray;
-        for (int i=0;i<this.jsonArray.length();i++){
-            try {
-                dataJson.add(this.jsonArray.getJSONObject(i));
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     @Override
@@ -44,8 +36,8 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MAdapter
 
     @Override
     public void onBindViewHolder(MAdapter holder, int position) {
-        JSONObject jsonObject = dataJson.get(position);
         try {
+            JSONObject jsonObject = jsonArray.getJSONObject(position);
             holder.foto.setImageResource(jsonObject.getInt("Foto"));
             holder.nama.setText(jsonObject.getString("Pengirim"));
             holder.pesan.setText(jsonObject.getString("Content"));
@@ -57,7 +49,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MAdapter
 
     @Override
     public int getItemCount() {
-        return dataJson.size();
+        return jsonArray.length();
     }
 
     public class MAdapter extends RecyclerView.ViewHolder {
