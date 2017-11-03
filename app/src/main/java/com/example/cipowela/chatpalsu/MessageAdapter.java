@@ -46,10 +46,10 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MAdapter
     public void onBindViewHolder(MAdapter holder, int position) {
         JSONObject jsonObject = dataJson.get(position);
         try {
-            holder.foto.setImageResource(jsonObject.getInt("foto"));
-            holder.nama.setText(jsonObject.getString("nama"));
-            holder.pesan.setText(jsonObject.getString("pesan"));
-            holder.tanggal.setText(jsonObject.getString("tanggal"));
+            holder.foto.setImageResource(jsonObject.getInt("Foto"));
+            holder.nama.setText(jsonObject.getString("Pengirim"));
+            holder.pesan.setText(jsonObject.getString("Content"));
+            holder.tanggal.setText(jsonObject.getString("Waktu"));
         } catch (JSONException e) {
             e.printStackTrace();
         }

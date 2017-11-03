@@ -33,10 +33,10 @@ public class FormActivity extends AppCompatActivity {
     public void send(View view) {
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("nama",form_nama.getText().toString());
-            jsonObject.put("pesan",form_pesan.getText().toString());
-            jsonObject.put("tanggal",new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime()));
-            jsonObject.put("foto",R.drawable.gambar_1);
+            jsonObject.put("Pengirim",form_nama.getText().toString());
+            jsonObject.put("Content",form_pesan.getText().toString());
+            jsonObject.put("Waktu",new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime()));
+            jsonObject.put("Foto",R.drawable.gambar_1);
         } catch (JSONException e) {
             e.printStackTrace();
         }
