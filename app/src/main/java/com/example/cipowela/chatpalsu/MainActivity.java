@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.cipowela.chatpalsu.Adapter.MessageAdapter;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 
