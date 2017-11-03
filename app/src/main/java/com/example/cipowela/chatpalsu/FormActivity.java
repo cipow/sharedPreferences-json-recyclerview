@@ -24,6 +24,9 @@ public class FormActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
+
+        getSupportActionBar().setTitle("Tambah Pesan");
+
         form_nama = (EditText) findViewById(R.id.form_nama);
         form_pesan = (EditText) findViewById(R.id.form_pesan);
         preferences = getSharedPreferences(MainActivity.mainPrers,0);
