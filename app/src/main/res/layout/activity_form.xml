@@ -8,17 +8,29 @@
     android:orientation="vertical"
     tools:context="com.example.cipowela.chatpalsu.FormActivity">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nama" />
+        android:layout_marginBottom="10dp">
+        <Spinner
+            android:id="@+id/foto_image"
+            android:layout_width="100dp"
+            android:layout_height="80dp"/>
+        <TextView
+            android:id="@+id/text"
+            android:layout_toRightOf="@id/foto_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama" />
 
-    <EditText
-        android:id="@+id/form_nama"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:hint="Nama anda" />
+        <EditText
+            android:id="@+id/form_nama"
+            android:layout_toRightOf="@id/foto_image"
+            android:layout_below="@id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama anda" />
+    </RelativeLayout>
 
     <TextView
         android:layout_width="match_parent"
