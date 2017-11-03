@@ -19,7 +19,9 @@
         android:layout_alignParentRight="true"
         android:layout_margin="20dp"
         android:onClick="addMessage"
-        app:backgroundTint="@android:color/holo_blue_bright"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="normal"
+        app:rippleColor="@android:color/holo_blue_bright"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
 
 </RelativeLayout>
